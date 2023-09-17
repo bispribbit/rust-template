@@ -1,0 +1,9 @@
+// Shared vscode settings goes here.
+{
+    "rust-analyzer.rustfmt.extraArgs": [
+        "--config",
+        "group_imports=StdExternalCrate",
+        "--config",
+        "imports_granularity=Module"
+    ]
+}

@@ -1,0 +1,109 @@
+[cargo-new]
+name = "Your name"
+email = "name@something.com"
+vcs = "none"
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-Clink-arg=-fuse-ld=lld"]
+
+[target.'cfg(all())']
+rustflags = [
+    "-Dunsafe_code",
+    # Rustc lints
+    "-Wfuture_incompatible",
+    "-Wnonstandard_style",
+    "-Wrust_2018_idioms",
+
+    # Clippy pedantic lints, treat all as warnings by default, add exceptions in allow list below
+    "-Wclippy::pedantic",
+
+    # Clippy nursery lints, still under development
+    "-Wclippy::clear_with_drain",
+    "-Wclippy::debug_assert_with_mut_call",
+    "-Wclippy::derive_partial_eq_without_eq",
+    "-Wclippy::disallowed_methods",
+    "-Wclippy::disallowed_types",
+    "-Wclippy::empty_line_after_outer_attr",
+    "-Wclippy::equatable_if_let",
+    "-Wclippy::equatable_if_let",
+    "-Wclippy::expect_used",
+    "-Wclippy::fallible_impl_from",
+    "-Wclippy::imprecise_flops",
+    "-Wclippy::indexing_slicing",
+    "-Wclippy::iter_with_drain",
+    "-Wclippy::manual_clamp",
+    "-Wclippy::min_ident_chars",
+    "-Wclippy::mutex_integer",
+    "-Wclippy::non_send_fields_in_send_ty",
+    "-Wclippy::nonstandard_macro_braces",
+    "-Wclippy::panic",
+    "-Wclippy::path_buf_push_overwrite",
+    # "-Wclippy::readonly_write_lock", # Coming in 1.73.0
+    "-Wclippy::significant_drop_in_scrutinee",
+    "-Wclippy::string_lit_as_bytes",
+    "-Wclippy::suspicious_operation_groupings",
+    "-Wclippy::trailing_empty_array",
+    "-Wclippy::trailing_empty_array",
+    "-Wclippy::trivial_regex",
+    "-Wclippy::undocumented_unsafe_blocks",
+    "-Wclippy::unused_peekable",
+    "-Wclippy::unused_rounding",
+    "-Wclippy::unwrap_used",
+    "-Wclippy::use_self",
+    "-Wclippy::useless_let_if_seq",
+    "-Wclippy::useless_transmute",
+
+    # Clippy restriction lints, usually not considered bad, but useful in specific cases
+    '-Wclippy::mem_forget',
+    "-Wclippy::alloc_instead_of_core",
+    "-Wclippy::as_ptr_cast_mut",
+    "-Wclippy::as_underscore",
+    "-Wclippy::bool_to_int_with_if",
+    "-Wclippy::collection_is_never_read",
+    "-Wclippy::dbg_macro",
+    "-Wclippy::default_union_representation",
+    "-Wclippy::deref_by_slicing",
+    "-Wclippy::empty_drop",
+    "-Wclippy::empty_line_after_doc_comments",
+    "-Wclippy::empty_structs_with_brackets",
+    "-Wclippy::exit",
+    "-Wclippy::float_cmp_const",
+    "-Wclippy::format_push_string",
+    "-Wclippy::large_include_file",
+    "-Wclippy::large_stack_frames",
+    "-Wclippy::let_underscore_untyped",
+    "-Wclippy::map_err_ignore",
+    "-Wclippy::missing_assert_message",
+    "-Wclippy::missing_enforced_import_renames",
+    "-Wclippy::needless_raw_strings",
+    "-Wclippy::negative_feature_names",
+    "-Wclippy::partial_pub_fields",
+    "-Wclippy::pub_without_shorthand",
+    "-Wclippy::redundant_type_annotations",
+    "-Wclippy::redundant_type_annotations",
+    "-Wclippy::ref_patterns",
+    "-Wclippy::rest_pat_in_fully_bound_structs",
+    "-Wclippy::same_name_method",
+    "-Wclippy::std_instead_of_alloc",
+    "-Wclippy::std_instead_of_core",
+    "-Wclippy::string_to_string",
+    "-Wclippy::tests_outside_test_module",
+    "-Wclippy::todo",
+    "-Wclippy::unimplemented",
+    "-Wclippy::verbose_file_reads",
+
+
+    # Clippy pedantic exceptions
+    "-Aclippy::cast_possible_truncation",
+    "-Aclippy::cast_sign_loss",
+    "-Aclippy::if_not_else",
+    "-Aclippy::items_after_statements",
+    "-Aclippy::missing_panics_doc",
+    "-Aclippy::module_name_repetitions",
+    "-Aclippy::must_use_candidate",
+    "-Aclippy::shadow_unrelated",
+    "-Aclippy::similar_names",
+    "-Aclippy::too_many_lines",
+    "-Aclippy::unreadable_literal",
+    "-Aclippy::unseparated_literal_suffix",
+]
