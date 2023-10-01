@@ -3,8 +3,14 @@ name = "Your name"
 email = "name@something.com"
 vcs = "none"
 
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+[target.x86_64-pc-windows-gnu]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
 [target.x86_64-unknown-linux-gnu]
-rustflags = ["-Clink-arg=-fuse-ld=lld"]
+rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=lld"]
 
 [target.'cfg(all())']
 rustflags = [
@@ -25,7 +31,6 @@ rustflags = [
     "-Wclippy::disallowed_types",
     "-Wclippy::empty_line_after_outer_attr",
     "-Wclippy::equatable_if_let",
-    "-Wclippy::equatable_if_let",
     "-Wclippy::expect_used",
     "-Wclippy::fallible_impl_from",
     "-Wclippy::imprecise_flops",
@@ -38,6 +43,7 @@ rustflags = [
     "-Wclippy::nonstandard_macro_braces",
     "-Wclippy::panic",
     "-Wclippy::path_buf_push_overwrite",
+
     # "-Wclippy::readonly_write_lock", # Coming in 1.73.0
     "-Wclippy::significant_drop_in_scrutinee",
     "-Wclippy::string_lit_as_bytes",
@@ -80,7 +86,6 @@ rustflags = [
     "-Wclippy::partial_pub_fields",
     "-Wclippy::pub_without_shorthand",
     "-Wclippy::redundant_type_annotations",
-    "-Wclippy::redundant_type_annotations",
     "-Wclippy::ref_patterns",
     "-Wclippy::rest_pat_in_fully_bound_structs",
     "-Wclippy::same_name_method",
@@ -92,15 +97,16 @@ rustflags = [
     "-Wclippy::unimplemented",
     "-Wclippy::verbose_file_reads",
 
-
     # Clippy pedantic exceptions
     "-Aclippy::cast_possible_truncation",
     "-Aclippy::cast_sign_loss",
+    "-Aclippy::cast_precision_loss",
     "-Aclippy::if_not_else",
     "-Aclippy::items_after_statements",
     "-Aclippy::missing_panics_doc",
     "-Aclippy::module_name_repetitions",
     "-Aclippy::must_use_candidate",
+    "-Aclippy::needless_pass_by_value",
     "-Aclippy::shadow_unrelated",
     "-Aclippy::similar_names",
     "-Aclippy::too_many_lines",
