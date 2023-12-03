@@ -1,4 +1,4 @@
-pub fn add(value_a: i64, value_b: i64) -> i64 {
+pub const fn add(value_a: i64, value_b: i64) -> i64 {
     value_a + value_b
 }
 
