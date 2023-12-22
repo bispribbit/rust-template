@@ -1,10 +1,15 @@
 // Shared vscode settings goes here.
 {
+    "editor.formatOnSave": true,
+    "files.eol": "\n",
     "rust-analyzer.rustfmt.extraArgs": [
         "--config",
         "group_imports=StdExternalCrate",
         "--config",
         "imports_granularity=Module"
     ],
-    "files.eol": "\n",
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.cargo.extraEnv": {
+        "RUSTFLAGS": "-Clinker=rust-lld.exe"
+    },
 }
