@@ -18,10 +18,11 @@ project_lib = { path = "project_lib" }
 parking_lot = { version = "0.12.1", default-features = false }
 
 [workspace.lints.rust]
-unsafe_code = "deny"
+elided-lifetimes-in-paths = "allow" # Adds lots of noise in Bevy code for no benefit
 future_incompatible = "warn"
 nonstandard_style = "warn"
 rust_2018_idioms = "warn"
+unsafe_code = "deny"
 
 [workspace.lints.clippy]
 nursery = { level = "warn", priority = -1 }
@@ -64,7 +65,6 @@ empty_drop = "warn"
 empty_line_after_doc_comments = "warn"
 empty_structs_with_brackets = "warn"
 exit = "warn"
-expect_used = "warn"
 fallible_impl_from = "warn"
 float_cmp_const = "warn"
 format_push_string = "warn"
