@@ -9,7 +9,8 @@
         "imports_granularity=Module"
     ],
     "rust-analyzer.check.command": "clippy",
-    "rust-analyzer.cargo.extraEnv": {
-        "RUSTFLAGS": "-Clinker=rust-lld.exe"
-    },
+    // Clippy runs just in the current crate, not the whole workspace (Big speedup)
+    "rust-analyzer.check.workspace": false,
+    // Clippy runs in a different folder, preventing "waiting for file lock on build directory"
+    "rust-analyzer.cargo.targetDir": true,
 }

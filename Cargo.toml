@@ -1,5 +1,5 @@
 [workspace]
-members = ["project_lib", "project_exe"]
+members = ["crates/*"]
 
 # Resolver needs to be set for workspaces
 # https://doc.rust-lang.org/edition-guide/rust-2021/default-cargo-resolver.html
@@ -12,7 +12,7 @@ license = "MIT OR Apache-2.0"
 
 [workspace.dependencies]
 # Internal workspace dependencies
-project_lib = { path = "project_lib" }
+project_lib = { path = "crates/project_lib" }
 
 # External workspace dependencies
 parking_lot = { version = "0.12.1", default-features = false }
