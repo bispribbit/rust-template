@@ -34,7 +34,9 @@ cognitive_complexity = "allow" # Doesn't work well in practice
 pedantic = { level = "warn", priority = -1 }
 
 # Pedentic exceptions in allow list below
+cast_lossless = "allow"
 cast_possible_truncation = "allow"
+cast_possible_wrap = "allow"
 cast_precision_loss = "allow"
 cast_sign_loss = "allow"
 if_not_else = "allow"
@@ -45,6 +47,8 @@ must_use_candidate = "allow"
 needless_pass_by_value = "allow"
 shadow_unrelated = "allow"
 similar_names = "allow"
+struct_excessive_bools = "allow"
+too_many_arguments = "allow"
 too_many_lines = "allow"
 unreadable_literal = "allow"
 unseparated_literal_suffix = "allow"
