@@ -1,5 +1,1 @@
 newline_style = "Unix"
-
-# This is nightly only to be enabled when stabilized
-# group_imports = "StdExternalCrate"
-# imports_granularity = "Module"

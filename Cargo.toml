@@ -27,7 +27,7 @@ unsafe_code = "deny"
 [workspace.lints.clippy]
 nursery = { level = "warn", priority = -1 }
 
-# Nursery expecption in allow list below 
+# Nursery exception in allow list below 
 cognitive_complexity = "allow" # Doesn't work well in practice
 
 # Clippy pedantic lints, treat all as warnings by default
