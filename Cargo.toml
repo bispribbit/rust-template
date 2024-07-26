@@ -18,10 +18,11 @@ project_lib = { path = "crates/project_lib" }
 parking_lot = { version = "0.12.1", default-features = false }
 
 [workspace.lints.rust]
+future_incompatible = { level = "warn", priority = -1 }
+nonstandard_style = { level = "warn", priority = -1 }
+rust_2018_idioms = { level = "warn", priority = -1 }
+
 elided-lifetimes-in-paths = "allow" # Adds lots of noise in Bevy code for no benefit
-future_incompatible = "warn"
-nonstandard_style = "warn"
-rust_2018_idioms = "warn"
 unsafe_code = "deny"
 
 [workspace.lints.clippy]
