@@ -58,6 +58,7 @@ unseparated_literal_suffix = "allow"
 type_complexity = "allow"
 
 # Restriction lints
+allow_attributes = "warn"
 alloc_instead_of_core = "warn"
 as_ptr_cast_mut = "warn"
 as_underscore = "warn"
