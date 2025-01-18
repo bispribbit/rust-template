@@ -1,6 +1,6 @@
 [cargo-new]
 name = "Your name"
-email = "name@something.com"
+email = "name@example.com"
 vcs = "none"
 
 [target.x86_64-pc-windows-msvc]
