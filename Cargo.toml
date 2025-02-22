@@ -3,11 +3,11 @@ members = ["crates/*"]
 
 # Resolver needs to be set for workspaces
 # https://doc.rust-lang.org/edition-guide/rust-2021/default-cargo-resolver.html
-resolver = "2"
+resolver = "3"
 
 [workspace.package]
 # Default license and edition
-edition = "2021"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [workspace.dependencies]
@@ -21,6 +21,10 @@ parking_lot = { version = "0.12.3", default-features = false }
 future_incompatible = { level = "warn", priority = -1 }
 nonstandard_style = { level = "warn", priority = -1 }
 rust_2018_idioms = { level = "warn", priority = -1 }
+rust_2021_compatibility = { level = "warn", priority = -1 }
+rust_2024_compatibility = { level = "warn", priority = -1 }
+
+tail_expr_drop_order = { level = "allow" } # Warns on all significant drop
 
 elided-lifetimes-in-paths = "allow" # Adds lots of noise in Bevy code for no benefit
 unsafe_code = "deny"
