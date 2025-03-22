@@ -15,6 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: 1.85.0
+        override: true
+        components: clippy
     - uses: EmbarkStudios/cargo-deny-action@v2
     
     - name: Clippy
