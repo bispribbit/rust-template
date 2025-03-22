@@ -18,8 +18,8 @@ jobs:
     - uses: EmbarkStudios/cargo-deny-action@v2
     
     - name: Clippy
-      run: cargo clippy --all-features --all-targets -D --verbose
+      run: cargo clippy --all-features --all-targets -- -D warnings
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo test
     - name: Deny
       run: cargo deny check
