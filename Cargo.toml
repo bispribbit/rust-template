@@ -58,7 +58,7 @@ too_many_lines = "allow"
 unreadable_literal = "allow"
 unseparated_literal_suffix = "allow"
 
-# Normal lints that we get often due to Bevy
+# Normal are often triggered in bevy
 type_complexity = "allow"
 
 # Restriction lints

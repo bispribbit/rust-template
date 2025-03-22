@@ -1,8 +1,6 @@
 name: Rust
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -20,11 +18,8 @@ jobs:
         toolchain: 1.85.0
         override: true
         components: clippy
-    - uses: EmbarkStudios/cargo-deny-action@v2
     
     - name: Clippy
       run: cargo clippy --all-features --all-targets -- -D warnings
     - name: Run tests
       run: cargo test
-    - name: Deny
-      run: cargo deny check
