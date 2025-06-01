@@ -15,7 +15,7 @@ license = "MIT OR Apache-2.0"
 project_lib = { path = "crates/project_lib" }
 
 # External workspace dependencies
-parking_lot = { version = "0.12.3", default-features = false }
+parking_lot = { version = "0.12.4", default-features = false }
 
 [workspace.lints.rust]
 future_incompatible = { level = "warn", priority = -1 }
