@@ -22,7 +22,7 @@ jobs:
         components: rustfmt, clippy
 
     - name: Rust Cache
-      uses: Swatinem/rust-cache@2.8.1
+      uses: Swatinem/rust-cache@v2
 
     - name: Cargo Fmt
       run: cargo fmt --all -- --check
