@@ -6,9 +6,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "fill-labs.dependi",
+                "github.vscode-github-actions",
                 "rust-lang.rust-analyzer",
                 "tamasfe.even-better-toml",
-                "fill-labs.dependi",
                 "vadimcn.vscode-lldb"
             ],
             "settings": {
