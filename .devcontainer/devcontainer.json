@@ -1,8 +1,8 @@
 {
     "name": "Rust Development",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -31,7 +31,5 @@
         }
     },
     "remoteUser": "root",
-    "mounts": [
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.cargo/registry,target=/usr/local/cargo/registry,type=bind,consistency=cached"
-    ]
+    "postStartCommand": "cd /workspace/crates/database && sqlx migrate run"
 }
