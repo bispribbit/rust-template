@@ -1,4 +1,4 @@
-FROM rust:1.92.0-trixie
+FROM rust:1.96.1-trixie
 
 # Install additional tools for Rust development
 RUN apt-get update && apt-get install -y \

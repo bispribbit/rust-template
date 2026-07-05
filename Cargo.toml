@@ -15,9 +15,9 @@ license = "MIT OR Apache-2.0"
 database = { path = "crates/database" }
 
 # External workspace dependencies
-anyhow = { version = "1.0.100" }
-sqlx = { version = "0.8.6", features = ["runtime-tokio", "tls-rustls", "postgres", "migrate"] }
-tokio = { version = "1.48.0", features = ["rt-multi-thread", "macros"] }
+anyhow = { version = "1.0.103" }
+sqlx = { version = "0.9.0", features = ["runtime-tokio", "tls-rustls", "postgres", "migrate"] }
+tokio = { version = "1.52.3", features = ["rt-multi-thread", "macros"] }
 
 [workspace.lints.rust]
 future_incompatible = { level = "warn", priority = -1 }
